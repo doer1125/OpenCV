@@ -10,9 +10,16 @@ import pytesseract
 import cv2
 import os
 
+# 配置 tesseract 可执行文件路径
+pytesseract.pytesseract.tesseract_cmd = r'D:\Develop\Tesseract-OCR\tesseract.exe'
+
+# 获取当前脚本所在目录
+script_dir = os.path.dirname(os.path.abspath(__file__))
+image_path = os.path.join(script_dir, 'scan_result.jpg')
+
 preprocess = 'blur' #thresh
 
-image = cv2.imread('scan.jpg')
+image = cv2.imread(image_path)
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 if preprocess == "thresh":
