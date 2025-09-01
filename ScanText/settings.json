@@ -1,0 +1,15 @@
+{
+    "image_path": "images\\page.jpg",
+    "output_path": "scan_result.jpg",
+    "canny_thresholds": {
+        "lower": 75,
+        "upper": 200
+    },
+    "gaussian_blur": {
+        "kernel_size": [5, 5],
+        "sigma": 0
+    },
+    "resize_height": 500,
+    "approx_epsilon_ratio": 0.02,
+    "binary_threshold": 100
+}
